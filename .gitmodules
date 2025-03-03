@@ -6,3 +6,6 @@
 	path = e-commerce
 	url = https://github.com/EdwinRVLK/e-commerce.git
 
+[submodule "poema"]
+	path = poema
+	url = https://github.com/EdwinRVLK/poema.git
