@@ -9,3 +9,6 @@
 [submodule "poema"]
 	path = poema
 	url = https://github.com/EdwinRVLK/poema.git
+[submodule "hmtl"]
+	path = hmtl
+	url = https://github.com/EdwinRVLK/hmtl.git
