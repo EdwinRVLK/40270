@@ -1,0 +1,31 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+    <!-- Orejas -->
+    <polygon points="90,70 130,30 150,80" fill="gray" stroke="black"></polygon>
+    <polygon points="210,70 170,30 150,80" fill="gray" stroke="black"></polygon>
+
+    <!-- Cabeza -->
+    <circle cx="150" cy="150" r="100" fill="gray" stroke="black"></circle>
+
+    <!-- Ojos -->
+    <circle cx="110" cy="130" r="25" fill="white" stroke="black"></circle>
+    <circle cx="190" cy="130" r="25" fill="white" stroke="black"></circle>
+
+    <!-- Pupilas -->
+    <circle cx="110" cy="130" r="10" fill="black"></circle>
+    <circle cx="190" cy="130" r="10" fill="black"></circle>
+
+    <!-- Nariz -->
+    <polygon points="140,170 160,170 150,185" fill="pink" stroke="black"></polygon>
+
+    <!-- Boca -->
+    <path d="M140,185 Q150,200 160,185" stroke="black" fill="none"></path>
+
+    <!-- Bigotes -->
+    <line x1="90" y1="180" x2="140" y2="180" stroke="black"></line>
+    <line x1="90" y1="190" x2="140" y2="190" stroke="black"></line>
+    <line x1="90" y1="200" x2="140" y2="200" stroke="black"></line>
+
+    <line x1="160" y1="180" x2="210" y2="180" stroke="black"></line>
+    <line x1="160" y1="190" x2="210" y2="190" stroke="black"></line>
+    <line x1="160" y1="200" x2="210" y2="200" stroke="black"></line>
+</svg>
