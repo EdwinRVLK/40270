@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad</title>
+    
+
+</head>
+<body>
+
+    <button aria-label="Cerrar ventana">x</button>
+    <button aria-label="No lo presiones o repruebas">💀</button>
+
+    <label for="usuario">Nombre de usuario</label>
+    <input type="text" id="usuario" aria-describedby="instrucciones">
+    <p id="instrucciones">El nombre de usuario debe tener 6 caracteres alfanuméricos</p>
+
+    <button aria-expanded="false" aria-controls="nav" id="MenuButton">Menu</button>
+    <nav id="nav" hidden>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Servicios</a></li>
+        </ul>
+    </nav>
+
+    <div role="tablist">
+        <button aria-selected="true" role="tab" aria-controls="pes1" id="tab1">Pestaña 1</button>
+
+        <button aria-selected="false" role="tab" aria-controls="pes2" id="tab2">Pestaña 2</button>
+    </div>
+
+    <div id="pes1" role="tabpanel" aria-labelledby="tab1">  
+        
+        <fieldset>
+            <h2>Datos personales</h2>
+            Contenido de la pestaña 1
+        </fieldset>
+
+    </div>
+
+    <div id="pes2" role="tabpanel" aria-labelledby="tab2">
+        <fieldset>Contenido de la pestaña 2</fieldset> 
+    </div>
+
+    <div role="button" >Presiona aquí</div>
+
+    <script>
+        const menu = document.getElementsByTagName("button")[2];
+        const nav = document.getElementById("nav");
+
+        menu.addEventListener("click", () => {
+            if (menu.getAttribute("aria-expanded") == "false") {
+                menu.setAttribute("aria-expanded", "true");
+                nav.removeAttribute("hidden");
+            } else {
+                menu.setAttribute("aria-expanded", "false");
+                nav.setAttribute("hidden", "");
+            }
+        });
+
+        const pes1 = document.getElementById("tab1");
+        const pes2 = document.getElementById("tab2");
+
+        pes1.addEventListener("click", () => {
+            let divs = document.querySelectorAll('[role="tabpanel"]');
+            console.log(divs);
+            for (let i = 0; i < divs.length; i++) {
+                console.log(divs[i]);
+                divs[i].setAttribute("hidden", "");
+            }
+        });
+        
+        ;
+    </script>
+
+</body>
+</html>
